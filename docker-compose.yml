@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:4
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
+    container_name: mongo
+  # app_node_jwt:
+  #   build: ./app
+  #   ports:
+  #     - "3000:3000"
+  #   container_name: app_node_jwt
+
